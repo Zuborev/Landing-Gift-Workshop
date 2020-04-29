@@ -29,7 +29,7 @@ Route::group(['prefix'=>'admin', 'middleware'=>'auth'], function () {
  //admin/pages
   Route::group(['prefix'=>'pages'], function() {
         //admin/pages
-      Route::get('/', ['uses'=>'PagesController@execute', 'as'=>'pages']);
+      Route::get('/', ['uses'=>'PagesController@execute', 'as'=>'page']);
         //admin/pages/add
       Route::match(['get','post'],'/add', ['uses'=>'PagesAddController@execute', 'as' => 'pagesAdd']);
         //admin/edit/2
@@ -49,3 +49,7 @@ Route::group(['prefix'=>'admin', 'middleware'=>'auth'], function () {
     });
 
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
