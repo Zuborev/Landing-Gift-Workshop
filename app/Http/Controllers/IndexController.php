@@ -7,11 +7,49 @@ use App\Page;
 use App\Portfolio;
 use App\Employee;
 use App\Service;
+use Illuminate\Support\Facades\Mail;
+use function foo\func;
 
 
 class IndexController extends Controller
 {
     public function execute(Request $request) {
+
+        if($request->isMethod('POST')) {
+
+            $messages = [
+                'required' => "Поле :attribute обязательно к заполнению" ,
+                'email' => "Поле :attribute должно соответствовать email адресу"
+            ];
+
+            $this->validate($request,
+                [
+                   'name' =>'required|max:255',
+                   'phone'=>'required',
+                   'email'=>'required|email',
+                   'text'=>'required'
+                ], $messages);
+
+            $data = $request->all();
+            if (session('status')) {
+                $request->session()->forget('status'); // удаление из сессии
+            }
+            //mail
+                Mail::send('site.email', ['data'=>$data], function($message) use ($data) {
+                // Почта куда приходят письма
+                $mailAdmin = env('MAIL_ADMIN');
+                // Данные для отправки
+                $message->from($data['email'], $data['name']);
+                // Куда отправить и название темы
+                $message->to($mailAdmin)->subject('Question');
+
+                session(['status' => 'Email is send']); // запись в сессию
+                return redirect()->route('home');
+
+            });
+
+        }
+
         $pages = Page::all();
         $portfolios = Portfolio::get(['name', 'filter', 'images']);
         $services = Service::all();
