@@ -215,12 +215,12 @@
                 </div>
                 <div class="col-lg-8 wow fadeInLeft delay-06s">
                     <div class="form">
-                        @if(session('status'))
-                            <div class="alert alert-success">
-                                {{ session()->get('status') }}
-                            </div>
-                        @endif
-
+                        <div class="alert alert-success" role="alert" id="true">
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">x</span>
+                            </button>
+                            {{ session()->get('status') }}
+                        </div>
                         @if($errors->any())
                             <div class="alert alert-danger">
                                 <ul>

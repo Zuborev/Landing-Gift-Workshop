@@ -31,9 +31,7 @@ class IndexController extends Controller
                 ], $messages);
 
             $data = $request->all();
-            if (session('status')) {
-                $request->session()->forget('status'); // удаление из сессии
-            }
+
             //mail
                 Mail::send('site.email', ['data'=>$data], function($message) use ($data) {
                 // Почта куда приходят письма
@@ -43,11 +41,13 @@ class IndexController extends Controller
                 // Куда отправить и название темы
                 $message->to($mailAdmin)->subject('Question');
 
-                session(['status' => 'Email is send']); // запись в сессию
-                return redirect()->route('home');
-
+                    return redirect()
+                        ->route('home')
+                        ->with(['status' => 'Успешно отправлено']);
             });
-
+            if (session('status')) {
+                $request->session()->forget('status'); // удаление из сессии
+            }
         }
 
         $pages = Page::all();
