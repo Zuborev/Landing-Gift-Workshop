@@ -8,6 +8,24 @@
                        <div class="hero_section">
                            <div class="row">
                                <div class="col-lg-5 col-sm-7">
+                                   @if(session('success'))
+                                       <div class="alert alert-success" role="alert" id="true">
+                                           <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                               <span aria-hidden="true">x</span>
+                                           </button>
+                                           {{ session()->get('success') }}
+                                       </div>
+                                   @endif
+                                   @if($errors->any())
+                                           @foreach($errors->all() as $error)
+                                               <div class="alert alert-danger" role="alert" id="true">
+                                                   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                       <span aria-hidden="true">x</span>
+                                                   </button>
+                                                   {{ $error }}
+                                                   </div>
+                                           @endforeach
+                                   @endif
                                    <div class="top_left_cont zoomIn wow animated">
                                        {!! $page->text !!}
                                        <a href="{{ route('page', ['alias'=>$page->alias]) }}" class="read_more2">Подробнее</a> </div>
@@ -102,7 +120,7 @@
                 <div id="filters" class="sixteen columns">
                     <ul class="clearfix">
                         <li><a id="all" href="#" data-filter="*" class="active">
-                                <h5>All</h5>
+                                <h5>Все</h5>
                             </a></li>
                         @foreach($tags as $tag)
                             <li><a class="" href="#" data-filter=".{{$tag}}">
@@ -215,22 +233,8 @@
                 </div>
                 <div class="col-lg-8 wow fadeInLeft delay-06s">
                     <div class="form">
-                        <div class="alert alert-success" role="alert" id="true">
-                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                <span aria-hidden="true">x</span>
-                            </button>
-                            {{ session()->get('status') }}
-                        </div>
-                        @if($errors->any())
-                            <div class="alert alert-danger">
-                                <ul>
-                                    @foreach($errors->all() as $error)
-                                        <li>{{ $error }}</li>
-                                    @endforeach
-                                </ul>
-                            </div>
-                        @endif
-                    <form action = "#contact" method = "POST">
+
+                    <form action = "{{route('send')}}" method = "POST">
                         @csrf
                         <input class="input-text" type="text" name="name" placeholder="Введите ваше имя" onFocus="if(this.value==this.defaultValue)this.value='';" onBlur="if(this.value=='')this.value=this.defaultValue;" required>
                         <input class="input-text" type="text" name="phone" placeholder="Введите ваш телефон" onFocus="if(this.value==this.defaultValue)this.value='';" onBlur="if(this.value=='')this.value=this.defaultValue;" required>

@@ -13,13 +13,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::group([], function () {
-    Route::match(['get','post'],'/', ['uses'=>'IndexController@execute', 'as' => 'home']);
-    Route::get('/page/{alias}', ['uses'=>'PageController@execute', 'as' => 'pages']);
+
+Route::get('/','IndexController@execute')->name('home');
+Route::post('/send','IndexController@sendmail')->name('send');
+
+Route::get('/page/{alias}', ['uses'=>'PageController@execute', 'as' => 'pages']);
 
     Route::auth();
 
-});
+
 
 //admin
 Route::group(['prefix'=>'admin', 'middleware'=>'auth'], function () {
