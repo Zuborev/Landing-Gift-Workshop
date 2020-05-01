@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="94f27a17-c7a7-4cfc-97c3-d162e59286f5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Gallery.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/site/content_page.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/site/gallery.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/IndexController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/site/content.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/content.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
@@ -136,6 +138,11 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\OSPanel\domains\land.loc\app" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner scope="XML" />
@@ -154,7 +161,8 @@
       <updated>1588066753296</updated>
       <workItem from="1588066767394" duration="4838000" />
       <workItem from="1588148065359" duration="20937000" />
-      <workItem from="1588234309056" duration="27929000" />
+      <workItem from="1588234309056" duration="28210000" />
+      <workItem from="1588320612065" duration="5064000" />
     </task>
     <servers />
   </component>
@@ -178,14 +186,14 @@
       <screen x="-1920" y="0" width="1920" height="1160" />
     </state>
     <state width="1876" height="174" key="GridCell.Tab.0.right/-1920.0.1920.1160/0.0.1366.728@-1920.0.1920.1160" timestamp="1588197053841" />
-    <state x="-1389" y="296" key="com.intellij.ide.util.TipDialog" timestamp="1588234454912">
+    <state x="-1389" y="296" key="com.intellij.ide.util.TipDialog" timestamp="1588323941774">
       <screen x="-1920" y="0" width="1920" height="1160" />
     </state>
-    <state x="-1389" y="296" key="com.intellij.ide.util.TipDialog/-1920.0.1920.1160/0.0.1366.728@-1920.0.1920.1160" timestamp="1588234454912" />
+    <state x="-1389" y="296" key="com.intellij.ide.util.TipDialog/-1920.0.1920.1160/0.0.1366.728@-1920.0.1920.1160" timestamp="1588323941774" />
     <state x="378" y="186" key="com.intellij.ide.util.TipDialog/-1920.0.1920.1160/0.0.1366.728@0.0.1366.728" timestamp="1588148065845" />
-    <state x="-1297" y="265" width="672" height="678" key="search.everywhere.popup" timestamp="1588192638020">
+    <state x="-1297" y="265" width="672" height="678" key="search.everywhere.popup" timestamp="1588330896925">
       <screen x="-1920" y="0" width="1920" height="1160" />
     </state>
-    <state x="-1297" y="265" width="672" height="678" key="search.everywhere.popup/-1920.0.1920.1160/0.0.1366.728@-1920.0.1920.1160" timestamp="1588192638020" />
+    <state x="-1297" y="265" width="672" height="678" key="search.everywhere.popup/-1920.0.1920.1160/0.0.1366.728@-1920.0.1920.1160" timestamp="1588330896925" />
   </component>
 </project>

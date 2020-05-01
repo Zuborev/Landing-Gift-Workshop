@@ -13,13 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::auth();
 
 Route::get('/','IndexController@execute')->name('home');
 Route::post('/send','IndexController@sendmail')->name('send');
 
-Route::get('/page/{alias}', ['uses'=>'PageController@execute', 'as' => 'pages']);
-
-    Route::auth();
+Route::get('/page/{alias}', 'PageController@execute')->name('pages');
 
 
 

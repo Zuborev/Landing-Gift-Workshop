@@ -28,7 +28,7 @@
                                    @endif
                                    <div class="top_left_cont zoomIn wow animated">
                                        {!! $page->text !!}
-                                       <a href="{{ route('page', ['alias'=>$page->alias]) }}" class="read_more2">Подробнее</a> </div>
+                                       <a href="{{ route('pages', $page->alias) }}" class="read_more2">Наша Галерея</a> </div>
                                </div>
                                <div class="col-lg-7 col-sm-5">
                                    {!! Html::image('img/'.$page->images) !!}
@@ -52,7 +52,7 @@
                                    <div class=" delay-01s animated fadeInDown wow animated">
                                        {!! $page->text !!}
                                    </div>
-                                   <div class="work_bottom"> <span>Хотели бы знать больше..</span> <a href="{{route('page', ['alias'=>$page->alias ])}}" class="contact_btn">Напишите нам</a> </div>
+                                   <div class="work_bottom"> <span>Хотели бы знать больше..</span> <a href="#contact" class="contact_btn">Напишите нам</a> </div>
                                </div>
                            </div>
                        </div>
