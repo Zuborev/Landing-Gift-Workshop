@@ -14,14 +14,14 @@ class PageController extends Controller
         if(!$alias) {
             abort(404);
         }
-
-        if (view()->exists('site.gallery')) {
-            $page = Page::where('alias', strip_tags($alias))->first();
+        $page = Page::where('alias', strip_tags($alias))->first();
+        $galleries = Gallery::all();
+        if ((view()->exists('site.page')) && (!empty($page))) {
             $data = [
                 'title' => $page->name,
                 'page' => $page
             ];
-            return view('site.gallery', $data);
+            return view('site.page', compact('page', 'galleries'));
         } else {
             abort(404);
         }
