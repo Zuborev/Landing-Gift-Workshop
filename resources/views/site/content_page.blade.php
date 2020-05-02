@@ -9,11 +9,11 @@
     <div class="wrapper">
         @foreach($galleries as $gallery)
             <input type="checkbox" id="img{{$gallery->id}}">
-            <label for="img{{$gallery->id}}" class="lightbox">{!! Html::image('img/gallery/'.$gallery->image, $gallery->name) !!}</label>
+            <label for="img{{$gallery->id}}" class="lightbox"><img src="/img/gallery/{{$gallery->image}}" alt="{{$gallery->name}}"></label>
         @endforeach
         <div class="frame">
             @foreach($galleries as $gallery)
-                <label for="img{{$gallery->id}}" class="item">{!! Html::image('img/gallery/'.$gallery->image, $gallery->name) !!}</label>
+                <label for="img{{$gallery->id}}" class="item"><img src="/img/gallery/{{$gallery->image}}" alt="{{$gallery->name}}"></label>
             @endforeach
 
         </div>

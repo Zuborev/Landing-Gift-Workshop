@@ -31,7 +31,7 @@
                                        <a href="{{ route('pages', $page->alias) }}" class="read_more2">Наша Галерея</a> </div>
                                </div>
                                <div class="col-lg-7 col-sm-5">
-                                   {!! Html::image('img/'.$page->images) !!}
+                                   <img src="/img/{{ $page->images }}">
                                </div>
                            </div>
                        </div>
@@ -47,7 +47,7 @@
                        <h2>{{$page->name}}</h2>
                        <div class="inner_section">
                            <div class="row">
-                               <div class=" col-lg-4 col-md-4 col-sm-4 col-xs-12 pull-right">{!! Html::image('img/'.$page->images,'',['class'=>'img-circle delay-03s animated wow zoomIn']) !!}</div>
+                               <div class=" col-lg-4 col-md-4 col-sm-4 col-xs-12 pull-right"><img class="img-circle delay-03s animated wow zoomIn" src="/img/{{$page->images}}"></div>
                                <div class=" col-lg-7 col-md-7 col-sm-7 col-xs-12 pull-left">
                                    <div class=" delay-01s animated fadeInDown wow animated">
                                        {!! $page->text !!}
@@ -138,7 +138,7 @@
                 @foreach ($portfolios as $item)
                     <!-- Portfolio Item -->
                         <div style="position: absolute; left: 0px; top: 0px; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four   {{$item->filter}} isotope-item">
-                            <div class="portfolio_img"> {{Html::image('img/'.$item->images, $item->name)}} </div>
+                            <div class="portfolio_img"><img src="/img/{{$item->images}}" alt = "{{$item->name}}"></div>
                             <div class="item_overlay">
                                 <div class="item_info">
                                     <h4 class="project_name">{{ $item->name }}</h4>
@@ -171,7 +171,7 @@
                     <div class="team_area">
                         <div class="team_box wow fadeInDown delay-0{{ ($k*3+3) }}s">
                             <div class="team_box_shadow"><a href="javascript:void(0)"></a></div>
-                                {{ Html::image('img/'.$employee->images, $employee->name) }}
+                            <img src="/img/{{$employee->images}}" alt = "{{$employee->name}}">
                             <ul>
                                 <li><a href="{{$employee->instagram_link}}" class="fa fa-instagram"></a></li>
                             </ul>
