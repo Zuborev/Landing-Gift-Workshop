@@ -2,16 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="94f27a17-c7a7-4cfc-97c3-d162e59286f5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/content_pages.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/content_pages_add.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/header.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/pages.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/pages_add.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/layouts/admin.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/site/content.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/content.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/site/content_page.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/content_page.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PagesAddController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PagesAddController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/content_pages.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/content_pages.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/content_pages_add.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/content_pages_add.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -184,6 +178,7 @@
       <workItem from="1588234309056" duration="28210000" />
       <workItem from="1588320612065" duration="5064000" />
       <workItem from="1588332777241" duration="18971000" />
+      <workItem from="1588486553972" duration="7011000" />
     </task>
     <servers />
   </component>
@@ -207,11 +202,15 @@
       <screen x="-1920" y="0" width="1920" height="1160" />
     </state>
     <state width="1876" height="174" key="GridCell.Tab.0.right/-1920.0.1920.1160/0.0.1366.728@-1920.0.1920.1160" timestamp="1588197053841" />
-    <state x="-1389" y="296" key="com.intellij.ide.util.TipDialog" timestamp="1588332774896">
+    <state x="-1389" y="296" key="com.intellij.ide.util.TipDialog" timestamp="1588486587037">
       <screen x="-1920" y="0" width="1920" height="1160" />
     </state>
-    <state x="-1389" y="296" key="com.intellij.ide.util.TipDialog/-1920.0.1920.1160/0.0.1366.728@-1920.0.1920.1160" timestamp="1588332774896" />
+    <state x="-1389" y="296" key="com.intellij.ide.util.TipDialog/-1920.0.1920.1160/0.0.1366.728@-1920.0.1920.1160" timestamp="1588486587037" />
     <state x="378" y="186" key="com.intellij.ide.util.TipDialog/-1920.0.1920.1160/0.0.1366.728@0.0.1366.728" timestamp="1588148065845" />
+    <state x="339" y="157" key="run.anything.popup" timestamp="1588488142384">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="339" y="157" key="run.anything.popup/-1920.0.1920.1160/0.0.1366.728@0.0.1366.728" timestamp="1588488142384" />
     <state x="-1297" y="265" width="672" height="678" key="search.everywhere.popup" timestamp="1588330896925">
       <screen x="-1920" y="0" width="1920" height="1160" />
     </state>

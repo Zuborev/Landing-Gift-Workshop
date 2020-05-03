@@ -12,13 +12,14 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Auth::routes();
-Route::get('/home', 'HomeController@index')->name('home');
+//Auth::routes();
+//Route::get('/home', 'HomeController@index')->name('home');
 
 Route::group([], function () {
     Route::get('/','IndexController@execute')->name('home');
     Route::post('/send','IndexController@sendmail')->name('send');
     Route::get('/page/{alias}', 'PageController@execute')->name('pages');
+    Route::auth();
 });
 
 
@@ -38,7 +39,7 @@ Route::group(['prefix'=>'admin', 'middleware'=>'auth'], function () {
         //admin/pages
       Route::get('/', ['uses'=>'PagesController@execute', 'as'=>'pagesAll']);
         //admin/pages/add
-      Route::match(['get','post'],'/add', ['uses'=>'PagesAddController@execute', 'as' => 'pagesAdd']);
+      Route::match(['get','post'],'/add', 'PagesAddController@execute')->name ('pagesAdd');
         //admin/edit/2
       Route::match(['get','post', 'delete'],'/edit/{page}', ['uses'=>'PagesEditController@execute', 'as' => 'pagesEdit']);
   });

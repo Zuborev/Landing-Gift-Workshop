@@ -1,40 +1,40 @@
 <div class="wrapper container-fluid">
-    {!! Form::open(['url'=>route('pagesAdd'),'class'=>'form-horizontal','method' => 'POST', 'enctype'=>'multipart/form-data']) !!}
+    <form action="{{ route('pagesAdd') }}" class="form-horizontal" method="POST" enctype="multipart/form-data">
+        @method('POST')
+        @csrf
     <div class="form-group">
-        {!! Form::label('name', 'Название:', ['class'=>'col-xs-2 control-label']) !!}
+        <label for="name" class="col-xs-2 control-label">Название:</label>
         <div class="col-xs-8">
-            {!! Form::text('name', old('name'), ['class'=>'form-control', 'placeholder'=>'Введите название страницы']) !!}
+            <input type="text" name="name" value="{{old('name')}}" class="form-control" placeholder="Введите название страницы">
         </div>
     </div>
     <div class="form-group">
-        {!! Form::label('alias', 'Псевдоним:',['class'=>'col-xs-2 control-label']) !!}
+        <label for="alias" class="col-xs-2 control-label">Псевдоним:</label>
         <div class="col-xs-8">
-            {!! Form::text('alias', old('alias'), ['class' => 'form-control','placeholder'=>'Введите псевдоним страницы']) !!}
-        </div>
-    </div>
-
-    <div class="form-group">
-        {!! Form::label('text', 'Текст:',['class'=>'col-xs-2 control-label']) !!}
-        <div class="col-xs-8">
-            {!! Form::textarea('text', old('text'), ['id'=>'editor','class' => 'form-control','placeholder'=>'Введите текст страницы']) !!}
+            <input type="text" name="alias" value="{{old('alias')}}" class="form-control" placeholder="Введите псевдоним страницы">
         </div>
     </div>
 
     <div class="form-group">
-        {!! Form::label('images', 'Изображение:',['class'=>'col-xs-2 control-label']) !!}
+        <label for="text" class="col-xs-2 control-label">Текст:</label>
         <div class="col-xs-8">
-            {!! Form::file('images', ['class' => 'filestyle', "buttonText"=>'Выберите изображение','data-buttonName'=>"btn-primary",'data-placeholder'=>"Файла нет"]) !!}
+            <input type="textarea" name="text" value="{{old('text')}}" id="editor" class="form-control" placeholder="Введите текст страницы">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="images" class="col-xs-2 control-label">Изображение:</label>
+        <div class="col-xs-8">
+            <input type="file" class="filestyle" name="images" value="{{old('text')}}" data-placeholder="Файла нет">
         </div>
     </div>
 
     <div class="form-group">
         <div class="col-xs-offset-2 col-xs-10">
-            {!! Form::button('Сохранить', ['class' => 'btn btn-primary','type'=>'submit']) !!}
+            <button class="btn btn-primary" type="submit">Сохранить</button>
         </div>
     </div>
-
-    {!! Form::close() !!}
-
+    </form>
     <script>
         CKEDITOR.replace( 'editor' );
     </script>

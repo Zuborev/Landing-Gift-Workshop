@@ -14,11 +14,8 @@
             </tr>
             </thead>
             <tbody>
-
             @foreach($pages as $k => $page)
-
                 <tr>
-
                     <td>{{ $page->id }}</td>
                     <td><a href="{{route('pagesEdit',['page'=>$page->id])}}" alt="{{$page->name}}">{{$page->name}}</a></td>
                     <td>{{ $page->alias }}</td>
@@ -32,10 +29,7 @@
                         </form>
                     </td>
                 </tr>
-
             @endforeach
-
-
             </tbody>
         </table>
     @endif
