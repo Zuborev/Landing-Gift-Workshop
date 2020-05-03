@@ -2,7 +2,7 @@
 
     @foreach($pages as $k=>$page)
        @if($k%2 == 0)
-           <section id="home" class="top_cont_outer">
+           <section id="{{$page->alias}}" class="top_cont_outer">
                <div class="hero_wrapper">
                    <div class="container">
                        <div class="hero_section">
@@ -40,7 +40,7 @@
            </section>
            <!--Hero_Section-->
        @else
-           <section id="aboutus"><!--Aboutus-->
+           <section id="{{$page->alias}}"><!--Aboutus-->
                <div class="inner_wrapper">
                    <div class="container">
                        <br>

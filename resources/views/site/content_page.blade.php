@@ -1,5 +1,4 @@
 
-@if($page->alias == 'home')
     <head>
         <link href="/css/gallery.css" rel="stylesheet" type="text/css">
     </head>
@@ -19,5 +18,5 @@
         </div>
     </div>
     </body>
-@endif
+
 
