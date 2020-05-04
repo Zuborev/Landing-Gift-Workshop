@@ -141,7 +141,7 @@
                             <div class="portfolio_img"><img src="/img/{{$item->images}}" alt = "{{$item->name}}"></div>
                             <div class="item_overlay">
                                 <div class="item_info">
-                                    <h4 class="project_name">{{ $item->name }}</h4>
+                                    <h4 class="project_name">{!! $item->name !!}</h4>
                                 </div>
                             </div>
                         </div>

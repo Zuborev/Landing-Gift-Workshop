@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Auth::routes();
+Auth::routes(['register' => false]);
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::group([], function () {
@@ -43,11 +43,9 @@ Route::group(['prefix'=>'admin', 'middleware'=>'auth'], function () {
       Route::match(['get','post', 'delete'],'/edit/{page}', ['uses'=>'PagesEditController@execute', 'as' => 'pagesEdit']);
   });
 
-   Route::group(['prefix'=>'portfolios'], function() {
-        Route::get('/', ['uses'=>'PortfolioController@execute', 'as'=>'portfolios']);
-        Route::match(['get','post'],'/add', ['uses'=>'PortfolioAddController@execute', 'as' => 'portfolioAdd']);
-        Route::match(['get','post', 'delete'],'/edit/{portfolio}', ['uses'=>'PortfolioEditController@execute', 'as' => 'portfolioEdit']);
-    });
+  Route::resource('portfolios', 'AdminPortfolioController')->names('portfolios');
+
+
 
     Route::group(['prefix'=>'services'], function() {
         Route::get('/', ['uses'=>'ServiceController@execute', 'as'=>'services']);
