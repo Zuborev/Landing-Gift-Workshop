@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="94f27a17-c7a7-4cfc-97c3-d162e59286f5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/portfolioCreate.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/portfolioEdit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/portfolioIndex.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Portfolio.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Portfolio.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdminPortfolioController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminPortfolioController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/content_pages_edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/content_pages_edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/site/content.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/content.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/portfolioEdit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/portfolioEdit.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -182,7 +179,7 @@
       <workItem from="1588320612065" duration="5064000" />
       <workItem from="1588332777241" duration="18971000" />
       <workItem from="1588486553972" duration="25716000" />
-      <workItem from="1588584858012" duration="10103000" />
+      <workItem from="1588584858012" duration="13373000" />
     </task>
     <servers />
   </component>
@@ -190,10 +187,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="-1230" y="354" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1588595604193">
+    <state x="-1230" y="354" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1588611729119">
       <screen x="-1920" y="0" width="1920" height="1160" />
     </state>
-    <state x="-1230" y="354" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/-1920.0.1920.1160/0.0.1366.728@-1920.0.1920.1160" timestamp="1588595604193" />
+    <state x="-1230" y="354" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/-1920.0.1920.1160/0.0.1366.728@-1920.0.1920.1160" timestamp="1588611729119" />
     <state width="1876" height="174" key="GridCell.Tab.0.bottom" timestamp="1588197053860">
       <screen x="-1920" y="0" width="1920" height="1160" />
     </state>

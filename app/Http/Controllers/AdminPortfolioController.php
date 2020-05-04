@@ -99,9 +99,18 @@ class AdminPortfolioController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Portfolio $portfolio)
     {
-        //
+        $old = $portfolio->toArray();
+        if(view()->exists('admin.portfolioEdit')) {
+
+            $data = [
+                'title' => 'Редактирование элемента портфолио - '.$old['name'],
+                'data' => $old
+            ];
+
+            return view('admin.portfolioEdit', $data);
+        }
     }
 
     /**
@@ -111,9 +120,36 @@ class AdminPortfolioController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Portfolio $portfolio)
     {
-        //
+        $input = $request->except('_token');
+        $validator = Validator::make($input,[
+            'name' => 'required|max:255',
+            'filter'=> 'required|max:255',
+        ]);
+
+        if($validator->fails()) {
+            return redirect()
+                ->route('portfolios.edit', ['portfolio' => $input['id']])->withErrors($validator)->withInput();
+        }
+
+
+        if ($request->hasFile('images')) {
+            $file = $request->file('images');
+            $file->move(public_path().'/img', $file->getClientOriginalName());
+            $input['images'] = $file->getClientOriginalName();
+
+        } else {
+            $input['images'] = $input['old_images'];
+        }
+
+        unset($input['old_images']);
+
+        $portfolio->fill($input);
+
+        if($portfolio->update()) {
+            return redirect('admin')->with('success', 'Элемент портфолио обновлен');
+        }
     }
 
     /**

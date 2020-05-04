@@ -6,14 +6,14 @@
         <input type="hidden" name="id" value={{$data['id']}}>
         <label for="name" class="col-xs-2 control-label">Название:</label>
         <div class="col-xs-8">
-            <input type="text" name="name" value="{{$data['name']}}" class="form-control" placeholder="Введите название страницы">
+            <input type="text" name="name" value="{{$data['name']}}" class="form-control" placeholder="Введите название страницы" required>
         </div>
     </div>
 
     <div class="form-group">
         <label for="alias" class="col-xs-2 control-label">Псевдоним:</label>
         <div class="col-xs-8">
-            <input type="text" name="alias" value="{{$data['alias']}}" class="form-control" placeholder="Введите псевдоним страницы">
+            <input type="text" name="alias" value="{{$data['alias']}}" class="form-control" placeholder="Введите псевдоним страницы" required>
         </div>
     </div>
 
