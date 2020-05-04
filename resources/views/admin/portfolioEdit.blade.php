@@ -17,7 +17,7 @@
             <div class="form-group">
                 <label for="name" class="col-xs-2 control-label">Имя фильтра:</label>
                 <div class="col-xs-8">
-                    <input type="text" name="filter" value="{{$data['filter']}}" class="form-control" placeholder="Введите имя фильтра">
+                    <input type="text" name="filter" value="{{$data['filter']}}" class="form-control" placeholder="Введите имя фильтра" required>
                 </div>
             </div>
             <div class="form-group">

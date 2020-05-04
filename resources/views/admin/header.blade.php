@@ -14,12 +14,16 @@
                     <h5>Портфолио</h5>
                 </a>
             </li>
-            <li><a href="{{route('services')}}">
+            <li><a href="{{route('services.index')}}">
                     <h5>Сервисы</h5>
                 </a>
             </li>
-            <li><a href="{{route('galleries')}}">
+            <li><a href="{{route('galleries.index')}}">
                     <h5>Галерея</h5>
+                </a>
+            </li>
+            <li><a href="{{route('employees.index')}}">
+                    <h5>Команда</h5>
                 </a>
             </li>
         </ul>

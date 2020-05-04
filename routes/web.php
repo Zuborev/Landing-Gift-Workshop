@@ -44,20 +44,9 @@ Route::group(['prefix'=>'admin', 'middleware'=>'auth'], function () {
   });
 
   Route::resource('portfolios', 'AdminPortfolioController')->names('portfolios');
-
-
-
-    Route::group(['prefix'=>'services'], function() {
-        Route::get('/', ['uses'=>'ServiceController@execute', 'as'=>'services']);
-        Route::match(['get','post'],'/add', ['uses'=>'ServiceAddController@execute', 'as' => 'serviceAdd']);
-        Route::match(['get','post', 'delete'],'/edit/{service}', ['uses'=>'ServiceEditController@execute', 'as' => 'serviceEdit']);
-    });
-
-    Route::group(['prefix'=>'galleries'], function() {
-        Route::get('/', ['uses'=>'GalleryController@execute', 'as'=>'galleries']);
-        Route::match(['get','post'],'/add', ['uses'=>'GalleryAddController@execute', 'as' => 'galleryAdd']);
-        Route::match(['get','post', 'delete'],'/edit/{gallery}', ['uses'=>'GalleryEditController@execute', 'as' => 'galleryEdit']);
-    });
+  Route::resource('services', 'AdminServiceController')->names('services');
+  Route::resource('galleries', 'AdminGalleryController')->names('galleries');
+    Route::resource('employees', 'AdminEmployeeController')->names('employees');
 
 });
 

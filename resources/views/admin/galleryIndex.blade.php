@@ -4,26 +4,26 @@
 @endsection
 @section('content')
     <div style="margin:0px 50px 0px 50px;">
-        @if($portfolios)
+        @if($galleries)
+            <a href="{{ route('galleries.create') }}">Новое фото</a>
+            <br><br>
             <table class="table table-hover table-striped">
                 <thead>
                 <tr>
                     <th>№</th>
                     <th>Название</th>
-                    <th>Фильтр</th>
                     <th>Фото</th>
                     <th>Удаление</th>
                 </tr>
                 </thead>
                 <tbody>
-                @foreach($portfolios as $k => $portfolio)
+                @foreach($galleries as $k => $gallery)
                     <tr>
-                        <td>{{ $portfolio->id }}</td>
-                        <td><a href="{{ route('portfolios.edit', ['portfolio'=>$portfolio->id]) }}" alt="{{$portfolio->name}}">{{$portfolio->name}}</a></td>
-                        <td>{{ $portfolio->filter }}</td>
-                        <td><img src="/img/{{ $portfolio->images }}" class="img-thumbnail img-responsive" width="75px"></td>
+                        <td>{{ $gallery->id }}</td>
+                        <td><a href="{{ route('galleries.edit', ['gallery'=>$gallery->id]) }}" alt="{{$gallery->name}}">{{$gallery->name}}</a></td>
+                        <td><img src="/img/gallery/{{ $gallery->image }}" class="img-thumbnail img-responsive" width="75px"></td>
                         <td>
-                            <form action="{{route('portfolios.destroy', ['portfolio'=>$portfolio->id])}}" class="form-horizontal" method="POST">
+                            <form action="{{route('galleries.destroy', ['gallery'=>$gallery->id])}}" class="form-horizontal" method="POST">
                                 @method('DELETE')
                                 @csrf
                                 <button type="submit" class="btn btn-danger">Удалить</button>
@@ -33,8 +33,13 @@
                 @endforeach
                 </tbody>
             </table>
+            @if ($galleries->total() > $galleries->count())
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination">
+                        {{$galleries->links()}}
+                    </ul>
+                </nav>
+            @endif
         @endif
-            <a href="{{ route('portfolios.create') }}">Новый элемент</a>
     </div>
-    <br><br>
 @endsection
